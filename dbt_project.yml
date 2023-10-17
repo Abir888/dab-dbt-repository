@@ -39,4 +39,6 @@ models:
       materialized : view
   test:
       materialized : view
+  staging:
+      schema : 'staging'
 
