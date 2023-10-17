@@ -1,0 +1,26 @@
+
+
+models:
+    - name: stg_cc_sales
+      tests:
+        - unique:
+           column_name: "(date_date || '-' || product_id)"
+      columns:
+        - name: date_date
+          tests:
+            - not_null
+        - name: product_id
+          tests:
+          - not_null
+                
+        - name: qty
+          tests:
+          - not_null
+
+    - name: stg_cc_stock
+      columns:
+          - name: product_id
+            tests:
+                - unique
+                - not_null
+          
